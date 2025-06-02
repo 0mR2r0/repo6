@@ -211,9 +211,10 @@ Los parámetros del modelo son los siguientes:
 		\end{tabular}
 	\end{center}
 \end{table}
+\newpage
 \subsection{Análisis hidráulico}
-Se elaboró el siguiente análisis con la finalidad de visualizar la región de operación del regenerador. Asi mismo, se tomó en cuenta una longitud del lecho, diámetro de partícula y velocidades del aire variables, para observar como serian sus efectos en el numero de Reynolds del lecho, caídas de presión, el numero de Stanton y Biot.
-\begin{table}[ht!]
+Se elaboró el siguiente análisis con la finalidad de visualizar la región de operación del regenerador. Así mismo, se tomó en cuenta una longitud del lecho, diámetro de partícula y velocidades del aire variables, para observar como serian sus efectos en el numero de Reynolds del lecho, caídas de presión, el numero de Stanton y Biot.
+\begin{table}
 	\begin{center}
 		\caption{Rango de propiedades para el análisis hidráulico}
 		\begin{tabular}{|c|c|c|}
@@ -225,7 +226,18 @@ Se elaboró el siguiente análisis con la finalidad de visualizar la región de 
 			\hline			
 		\end{tabular}
 	\end{center}
-\end{table} 
+\end{table}
+\subsubsection{Numero de Reynolds}
+Para obtener este parámetro adimensional se obtuvo mediante la siguiente formula:
+\begin{equation}\label{Ecu_reynolds}
+	Re = \frac{d_p U_s \rho}{\mu}
+\end{equation}
+Donde $d_p$ corresponde al diámetro de partícula, $U_s$ a la velocidad superficial, $\rho$ a la densidad del gas y $\mu$ a la viscosidad dinámica del aire
+\begin{figure}[ht!]\label{Reynolds_vs_Us}
+	\centering
+	\includegraphics[scale=.9]{RevsUs.png}
+	\caption{Efecto de la velocidad superficial en el numero de Reynolds}
+\end{figure} 
 %------------------------------------------------------------------------%
 \end{document}
  
