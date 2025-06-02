@@ -167,7 +167,7 @@ Los parámetros del modelo son los siguientes:
 			\multicolumn{2}{ |c|}{Propiedades del gas} &  & unidades \\ \hline
 			$T_0$ & Temperatura inicial del gas & 25 & $^\circ C$ \\
 			$T_en$ & Temperatura de entrada & 727& $^\circ C$ \\
-			$\rho_g$ & Densidad del gas &0.51 &$kg/m^3$ \\
+			$\rho_g$ & Densidad del gas &0.51 &$kg \cdot m^{-3}$ \\
 			$h$ & Coeficiente de transferencia de calor &354.4538 & $W \cdot m^{-2} \cdot K^{-1}$ \\
 			$u$ & Velocidad superficial del gas &3.6 & $m \cdot s^{-1}$  \\
 			$C_{p,g}$&  Calor específico del gas & 1012 & $J \cdot kg^{-1} \cdot K^{-1}$\\
@@ -183,7 +183,7 @@ Los parámetros del modelo son los siguientes:
 			\hline
 			\multicolumn{2}{ |c|}{Propiedades del lecho} &  & unidades \\ \hline
 			$T_0$ & Temperatura inicial del lecho & 25 & $^\circ C$ \\
-			$\rho_s$ & Densidad del lecho &3970 &$kg/m^3$ \\
+			$\rho_s$ & Densidad del lecho &3970 &$kg \cdot m^{-3}$ \\
 			$\epsilon_s$ & Porosidad del lecho &0.38 &  \\
 			$h$ & Coeficiente de transferencia de calor &354.4538 & $W \cdot m^{-2} \cdot K^{-1}$ \\
 			$a_p$ & Área superficial de las partículas por unidad de volumen &124& $m^{-1}$ \\
@@ -211,6 +211,21 @@ Los parámetros del modelo son los siguientes:
 		\end{tabular}
 	\end{center}
 \end{table}
+\subsection{Análisis hidráulico}
+Se elaboró el siguiente análisis con la finalidad de visualizar la región de operación del regenerador. Asi mismo, se tomó en cuenta una longitud del lecho, diámetro de partícula y velocidades del aire variables, para observar como serian sus efectos en el numero de Reynolds del lecho, caídas de presión, el numero de Stanton y Biot.
+\begin{table}[ht!]
+	\begin{center}
+		\caption{Rango de propiedades para el análisis hidráulico}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{2}{ |c|}{Parámetro } & unidades \\ \hline
+			Longitud del lecho & 0.3 - 2& $m $ \\
+			Velocidad superficial &1.5 - 5 &$m \cdot s^{-1} $ \\
+			Diámetro de partícula & 0.5 - 5  & $m $ \\
+			\hline			
+		\end{tabular}
+	\end{center}
+\end{table} 
 %------------------------------------------------------------------------%
 \end{document}
  
