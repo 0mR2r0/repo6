@@ -12,6 +12,9 @@
 \usepackage{gensymb}
 \usepackage{stix2}
 \usepackage{siunitx}
+\usepackage{tikz}
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\addbibresource{refer_repo_6_rev.bib}
 \graphicspath{{img/}}
 \baselinestretch
 \renewcommand{\baselinestretch}{1.25}%Comando de interlineado
@@ -237,7 +240,23 @@ Donde $d_p$ corresponde al diámetro de partícula, $U_s$ a la velocidad superfi
 	\centering
 	\includegraphics[scale=.9]{RevsUs.png}
 	\caption{Efecto de la velocidad superficial en el numero de Reynolds}
-\end{figure} 
+\end{figure}
+\newline
+En la imagen anterior, se muestra como es el cambio del numero de Reynolds para el rango de velocidades y de igual manera el efecto del diámetro de partícula. Para lechos empacados el flujo laminar esta representado para números menores a $Re<10$, transitorio entre $10<Re<1000$ y turbulento para $Re>1000$.
+En la siguiente imagen, se graficó respecto al tamaño de la partícula para visualizar el cambio desde esa perspectiva. 
+\begin{figure}[ht!]\label{Reynolds_vs_Dp}
+	\centering
+	\includegraphics[scale=0.9]{RevsDp.png}
+	\caption{Efecto del diámetro de partícula en el numero de Reynolds}
+\end{figure}
+\subsubsection{Caída de presión}
+La diferencia de presión a lo largo del regenerador se obtuvo mediante la siguiente relación\cite{Valle-Guadarrama2015}:
+\begin{equation}\label{Ecu_ergun}
+	\Delta p = [ \frac{150}{Re} + 1.75 ] [ \frac{(U_s \rho)^2 L (1-\epsilon)}{\rho d_p \epsilon^3}  ]
+\end{equation}
+%-----------------------------------------------------------------------
+\newpage
+\printbibliography
 %------------------------------------------------------------------------%
 \end{document}
  
