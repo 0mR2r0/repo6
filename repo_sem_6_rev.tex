@@ -233,7 +233,7 @@ Se elaboró el siguiente análisis con la finalidad de visualizar la región de 
 \subsubsection{Numero de Reynolds}
 Para obtener este parámetro adimensional se obtuvo mediante la siguiente formula:
 \begin{equation}\label{Ecu_reynolds}
-	Re = \frac{d_p U_s \rho}{\mu}
+	Re = \frac{d_p U_s \rho_g}{\mu}
 \end{equation}
 Donde $d_p$ corresponde al diámetro de partícula, $U_s$ a la velocidad superficial, $\rho$ a la densidad del gas y $\mu$ a la viscosidad dinámica del aire
 \begin{figure}[ht!]\label{Reynolds_vs_Us}
@@ -252,15 +252,28 @@ En la siguiente imagen, se graficó respecto al tamaño de la partícula para vi
 \subsubsection{Caída de presión}
 La diferencia de presión a lo largo del regenerador se obtuvo mediante la siguiente relación\cite{Valle-Guadarrama2015}:
 \begin{equation}\label{Ecu_ergun}
-	\Delta p = [ \frac{150}{Re} + 1.75 ] [ \frac{(U_s \rho)^2 L (1-\epsilon)}{\rho d_p \epsilon^3}  ]
+	\Delta p = [ \frac{150}{Re} + 1.75 ] [ \frac{(U_s \rho)^2 L (1-\epsilon)}{\rho_g d_p \epsilon^3}  ]
 \end{equation}
 Donde $Re$ es el numero de Reynolds, $U_s$ velocidad superficial, $\rho$ la densidad del gas, $L$ longitud del lecho en metros, $\epsilon$ corresponde a la porosidad del lecho y $d_p$ el diámetro de la partícula del lecho.
-\begin{figure}\label{CaidaP_por_dp}
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[scale=0.9]{dPrvsDp_03.png}
 	\caption{Variación de la caída de presión según el diámetro de la partícula}
+	\label{fig:CaidaP_por_dp}
 \end{figure}
-Cada linea del grafico anterior corresponde a una velocidad del flujo del aire, se puede observar como la caída de presión aumenta con partículas mas pequeñas y va disminuyendo conforme crece su tamaño. Por lo tanto, el se requeriría menos energía para empujar el aire entre partículas mas grandes que no oponen menos resistencia al flujo del aire. 
+Cada linea del grafico \ref{fig:CaidaP_por_dp} corresponde a una velocidad del flujo del aire, se puede observar como la caída de presión aumenta con partículas mas pequeñas y va disminuyendo conforme crece su tamaño. Por lo tanto, el se requeriría menos energía para empujar el aire entre partículas mas grandes que no oponen menos resistencia al flujo del aire. 
+\subsubsection{Numero de Stanton}
+Es una cantidad adimensional que relaciona la transferencia de calor con la capacidad térmica del fluido, definida con la siguiente expresión:
+\begin{equation}\label{Ecu_stanton}
+	St = \frac{h a_p L}{U_s \rho_g C_{p,g}}
+\end{equation}
+\subsubsection{Numero de Biot}
+Este numero compara la resistencia térmica interna de un cuerpo por conducción con la  externa provocada por la convección en su superficie del cuerpo.
+\begin{equation}\label{Ecu_biot}
+Bi = 0	
+\end{equation}
+\subsection{Conductividad térmica efectiva}
+Esta ecuación de conductividad térmica de Zhner y Schlünder\cite{zehner1970} fue ocupada por Abdullah, para este trabajo usó piedras esféricas ademas de usar el modelo proporcionado por ANSYS para el análisis en dos dimensiones. \cite{ALI2025}
 %-----------------------------------------------------------------------
 \newpage
 \printbibliography
