@@ -263,18 +263,27 @@ Donde $Re$ es el numero de Reynolds, $U_s$ velocidad superficial, $\rho$ la dens
 \end{figure}
 Cada linea del grafico \ref{fig:CaidaP_por_dp} corresponde a una velocidad del flujo del aire, se puede observar como la caída de presión aumenta con partículas mas pequeñas y va disminuyendo conforme crece su tamaño. Por lo tanto, el se requeriría menos energía para empujar el aire entre partículas mas grandes que no oponen menos resistencia al flujo del aire. 
 \subsubsection{Numero de Stanton}
-Es una cantidad adimensional que relaciona la transferencia de calor con la capacidad térmica del fluido, definida con la siguiente expresión:
+Es una cantidad adimensional que relaciona la transferencia de calor con la capacidad térmica del fluido, definida con la siguiente expresión\cite{Ramachadran1984}:
 \begin{equation}\label{Ecu_stanton}
 	St = \frac{h a_p L}{U_s \rho_g C_{p,g}}
 \end{equation}
 \subsubsection{Numero de Biot}
-Este numero compara la resistencia térmica interna de un cuerpo por conducción con la  externa provocada por la convección en su superficie del cuerpo.
+Este numero compara la resistencia térmica interna de un cuerpo por conducción con la  externa provocada por la convección en su superficie del cuerpo\cite{Ramachadran1984}.
 \begin{equation}\label{Ecu_biot}
-Bi = 0	
+Bi = \frac{hR}{K_s}	
 \end{equation}
+donde $h$ coeficiente de transferencia de calor convección, $R$ radio de partícula y $K_s$ conductividad térmica del solido.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.9]{nBiot_us}
+	\caption{Comportamiento del Biot a distintas velocidades superficiales.}
+	\label{fig:Biot_us}
+\end{figure}
+Para el grafico \ref{fig:Biot_us} se analizó el cambio variando el coeficiente de transferencia de calor para un rango de velocidades entre 1.5 a 5 metros por segundo, para tamaños de partícula fijas de 5 a 95 milímetros de diámetro.
+\newpage
 \subsection{Conductividad térmica efectiva}
 \subsubsection{Para el gas}
-Esta ecuación de conductividad térmica de Zhner y Schlünder\cite{zehner1970} fue ocupada por Abdullah, para este trabajo usó piedras esféricas. Ademas de usar el modelo proporcionado por ANSYS para el análisis en dos dimensiones. \cite{ALI2025}
+Esta ecuación de conductividad térmica de Zehner y Schlünder\cite{zehner1970} fue ocupada por Abdullah, para este trabajo usó piedras esféricas. Ademas de usar el modelo proporcionado por ANSYS para el análisis en dos dimensiones. \cite{ALI2025}
 \begin{equation}\label{Kgx_Zenner}
 	K_{g,x}= k_f \left[ 1 - \sqrt{1-\epsilon} + \frac{2\sqrt{1-\epsilon}}{1- \gamma B} \left( \frac{(1-\gamma)B}{(1-\gamma B)^2}\ln \frac{1}{\gamma B} - \frac{B+1}{2}-\frac{B-1}{1-\gamma B}    \right)\right]
 \end{equation}
@@ -303,6 +312,14 @@ En el articulo de Qian \cite{QIAN2018} se retoma el modelo de Zehner-Bauer-Schl�
 	B = 1.25 \left( \frac{1-\epsilon_g}{\epsilon_g} \right)^{\frac{10}{9}}
 \end{equation*}
 Donde $\kappa = \frac{k_s}{k_g}$, porosidad $\epsilon_g$, fracción de superficie $\omega=\num{7.26E-3}$ 
+\subsection{Coeficiente de transferencia de calor por convección}
+Esta cantidad se define como: la tasa de transferencia de calor entre una superficie sólida y un fluido por unidad de área y por unidades de temperatura\cite{thermal2023conveccion}. La aplicación de este coeficiente es fundamental en distintas disciplinas: diseño de intercambiadores de calor, sistemas de aire acondicionado, procesos industriales y el sector energético.
+\subsubsection{A partir de números adimensionales}
+En la tesis de Lopez-Torres \cite{Lopez2014}, usan la siguiente formula para obtener $h$:
+\begin{equation}\label{Ecu_h_lopez}
+	h = \frac{Nu K_g}{d_p}
+\end{equation}
+Donde $Nu$ es el Nusselt, $K_g$ es la conductividad del gas y $d_p$ es el diámetro de partícula.
 %-----------------------------------------------------------------------
 \newpage
 \printbibliography
