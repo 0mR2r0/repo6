@@ -320,7 +320,7 @@ En la tesis de Lopez-Torres \cite{Lopez2014}, usan la siguiente formula para obt
 \end{equation}
 Donde $Nu$ es el Nusselt, $K_g$ es la conductividad del gas y $d_p$ es el diámetro de partícula.
 \newline
-La ecuación \ref{Ecu_h_lopez} es la forma general en que se puede obtener $h$. Por lo tanto, el Nusselt es el parámetro adimensional que describe como es la relación entre la transferencia de calor por convección y conducción. A continuación se en listan las ecuaciones para calcular el Nusselt para diferentes regímenes de flujo:
+La ecuación \ref{Ecu_h_lopez} es la forma general en que se puede obtener $h$. Por lo tanto, el Nusselt es el parámetro adimensional que describe como es la relación entre la transferencia de calor por convección y conducción. A continuación se en listan las ecuaciones para calcular el Nusselt para diferentes regímenes de flujo en la tabla \ref{tab:correlaciones_Nu}:
 
 \begin{table}[h]
 	\centering
@@ -338,7 +338,11 @@ La ecuación \ref{Ecu_h_lopez} es la forma general en que se puede obtener $h$. 
 	\end{tabular}
 	\label{tab:correlaciones_Nu}
 \end{table}
-
+El numero de Reynolds para lechos empacados se puede calcular con la siguiente ecuación:
+\begin{equation}
+	Re = \frac{d_p Us \rho_g}{\mu}
+\end{equation}
+Donde $d_p$ es el diámetro de partícula del lecho, $Us$ la velocidad superficial, $\rho_g$ la densidad del gas y $\mu$ la viscosidad dinámica del gas.
 %-----------------------------------------------------------------------
 \newpage
 \printbibliography
