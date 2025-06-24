@@ -314,12 +314,31 @@ En el articulo de Qian \cite{QIAN2018} se retoma el modelo de Zehner-Bauer-Schl�
 Donde $\kappa = \frac{k_s}{k_g}$, porosidad $\epsilon_g$, fracción de superficie $\omega=\num{7.26E-3}$ 
 \subsection{Coeficiente de transferencia de calor por convección}
 Esta cantidad se define como: la tasa de transferencia de calor entre una superficie sólida y un fluido por unidad de área y por unidades de temperatura\cite{thermal2023conveccion}. La aplicación de este coeficiente es fundamental en distintas disciplinas: diseño de intercambiadores de calor, sistemas de aire acondicionado, procesos industriales y el sector energético.
-\subsubsection{A partir de números adimensionales}
 En la tesis de Lopez-Torres \cite{Lopez2014}, usan la siguiente formula para obtener $h$:
 \begin{equation}\label{Ecu_h_lopez}
 	h = \frac{Nu K_g}{d_p}
 \end{equation}
 Donde $Nu$ es el Nusselt, $K_g$ es la conductividad del gas y $d_p$ es el diámetro de partícula.
+\newline
+La ecuación \ref{Ecu_h_lopez} es la forma general en que se puede obtener $h$. Por lo tanto, el Nusselt es el parámetro adimensional que describe como es la relación entre la transferencia de calor por convección y conducción. A continuación se en listan las ecuaciones para calcular el Nusselt para diferentes regímenes de flujo:
+
+\begin{table}[h]
+	\centering
+	\caption{Correlaciones para coeficiente de transferencia de calor en lechos empacados}
+	\begin{tabular}{|c|c|p{6cm}|}
+		\hline
+		\textbf{Régimen} & \textbf{Autor(es)} & \textbf{Ecuación} \\ \hline
+		Laminar ($Re_p < 10$) & Kunii y Smith (1960) \cite{kunii1960} & $Nu = 2 + 0.6 \cdot Re_p^{0.5} \cdot Pr^{1/3}$ \\ \hline
+		Transicional ($10 < Re_p < 1000$) & Wakao y Kaguei (1982)\cite{wakao1982} & $Nu = 2 + 1.1 \cdot Re_p^{0.6} \cdot Pr^{1/3}$ \\ \hline
+		Turbulento ($Re_p > 1000$) & Dwivedi y Upadhyay (1977)\cite{dwivedi1977} & $Nu = 0.57 \cdot Re_p^{0.7} \cdot Pr^{1/3}$ \\ \hline
+		Generalizado & Dixon y Cresswell\cite{dixon1983} & 
+		$Nu = a \cdot Re_p^b \cdot Pr^c \cdot \left( \frac{D}{d_p} \right)^d$ 
+		\vspace{2mm} \newline 
+		\textbf{Valores típicos:} $a=0.51$, $b=0.59$, $c=0.33$, $d=0.2$ \\ \hline
+	\end{tabular}
+	\label{tab:correlaciones_Nu}
+\end{table}
+
 %-----------------------------------------------------------------------
 \newpage
 \printbibliography
